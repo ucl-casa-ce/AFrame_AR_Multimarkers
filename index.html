@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Multi Markers AR - Playing the Archive - CASA UCL</title>
+    <meta name="description" content="Multi Markers AR - Playing the Archive - CASA UCL">
+
+	<!--AFrame - stable version 0.9.0 -->
+	 <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+
+	<!--Stable Version AR.Js 1.7.1 -->
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+<!--	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>-->
+
+  <!--manager script for the markers-->
+	 <script src="js/multiMarkersName.js"></script>
+	</head>
+
+	<body>
+	<a-scene markers_start vr-mode-ui="enabled: false" color-space="sRGB" renderer="gammaOutput: true"
+  embedded arjs='debugUIEnabled: false; sourceType: webcam; patternRatio: 0.85; trackingMethod: best;'>
+
+
+    	<a-entity id='userCamera' camera>
+    		<a-cursor> </a-cursor>
+    	</a-entity>
+
+	</a-scene>
+	</body>
+	</html>
