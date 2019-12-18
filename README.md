@@ -9,6 +9,6 @@ How it works?
 The index.html call the multiMarkersName.js script that create the <a-marker> tags using the PATT files in the resource folder. Each marker displays a text with its ID. Any other media can be added to the marker.
   
   ---------
-  AFrame https://aframe.io/ https://github.com/aframevr/aframe/
+  AFrame https://aframe.io/ https://github.com/aframevr/aframe/ <br/>
   AR.js https://github.com/jeromeetienne/AR.js
-  
+ 
