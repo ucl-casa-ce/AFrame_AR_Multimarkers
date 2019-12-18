@@ -1,9 +1,8 @@
-//Multi Markers AR - Playing the Archive - CASA UCL -Dec2019-
+//Multi Markers WebAR-AR.js and Aframe - Playing the Archive - Connected Environment CASA-UCL
 
 //Global Variable
 var markersURLArray=[];
 var markersNameArray=[];
-
 
 AFRAME.registerComponent('markers_start',{
 	init:function(){
@@ -11,7 +10,7 @@ AFRAME.registerComponent('markers_start',{
 
 		var sceneEl = document.querySelector('a-scene');
 		
-		//build the list of the markers_start
+		//list of the markers
 		for(var i=1; i<19; i++)
 		{
 			var url="resources/markers/pattern-Individual_Blocks-"+i+".patt";
@@ -30,12 +29,11 @@ AFRAME.registerComponent('markers_start',{
 			markerEl.setAttribute('registerevents','');
 			sceneEl.appendChild(markerEl);
 
-			//Adding a dummy text
+			//Adding text to each marker
 			var textEl = document.createElement('a-entity');
 			
 			textEl.setAttribute('id','text');
 			textEl.setAttribute('text',{color: 'red', align: 'center', value:markersNameArray[k], width: '5.5'});
-			
 			textEl.object3D.position.set(0, 0.7, 0);
 			textEl.object3D.rotation.set(-90, 0, 0);
 
@@ -45,7 +43,7 @@ AFRAME.registerComponent('markers_start',{
 });
 
 
-//Detect when a marker is detected
+//Detect marker found and lost
 AFRAME.registerComponent('registerevents', {
 		init: function () {
 			const marker = this.el;
